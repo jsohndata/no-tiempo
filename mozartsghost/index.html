@@ -1,1 +1,29 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mozart's Ghost Redirector</title>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    const redirectUrls = {
+      '0': 'https://www.youtube.com/watch?v=hoWEYBSlctc',
+      '1': 'https://github.com/jsohndata',
+      // ... more mappings as needed
+    };
+
+    // https://jsohndata.github.io/no-tiempo/mozartsghost?id=1
+    const targetUrl = redirectUrls[id];
+    
+    if (targetUrl) {
+      window.location.href = targetUrl; // Redirect if valid ID
+    } else {
+      // Handle invalid IDs (optional)
+      document.body.innerHTML = "<p>Invalid ID. Please check the URL.</p>";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
