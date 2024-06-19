@@ -1,0 +1,164 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    font-family: 'Wix Madefor Text', sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: rgba(8, 0, 16, 0.621);
+    background-image: url("/images/bg1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: color;
+    animation: change-bg 90s ease-in-out 1.3s  normal infinite;
+    transition: all 0.8s ease-in-out;
+  }
+
+@keyframes change-bg {
+  0% {
+    background-image: url("/images/bg1.webp");
+  }
+
+  20% {
+    background-image: url("/images/bg2.webp");
+  }
+
+  30% {
+    background-image: url("/images/bg3.webp");
+  }
+  
+  40% {
+    background-image: url("/images/bg4.webp");
+  }
+
+  50% {
+    background-image: url("/images/bg5.webp");
+  }
+
+  60% {
+    background-image: url("/images/bg6.webp");
+  }
+
+  70% {
+    background-image: url("/images/bg7.webp");
+  }  
+
+  80% {
+    background-image: url("/images/bg8.webp");
+  }    
+
+  100% {
+    background-image: url("/images/bg1.webp");
+  }
+}
+
+main h1 {
+  text-shadow: 2px 2px 15px rgba(242, 22, 161, 0.963);
+}
+
+main p {
+  text-shadow: 2px 2px 15px rgba(22, 242, 209, 0.679);
+}
+
+main li {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: 'Megrim', cursive;
+  font-size: clamp(2.6rem, 6vw, 7.5rem);
+  font-weight: 900;
+  color: white;
+}
+
+h1 span.korean {
+  display: block;
+}
+
+h1 span.api {
+  color:rgb(195, 0, 255);
+}
+
+a {
+  color: rgba(240, 243, 227, 0.9);
+}
+
+main p {
+  font-size: clamp(1.3rem, 5vw, 2.2rem);
+  color: rgba(169, 255, 244, 0.9);
+  line-height: 1.2em;
+}
+
+main ul {
+  width: 85%;
+  margin-top: 6%;
+}
+
+main li {
+  font-size: clamp(0.8rem, 4vw, 1.3rem);
+  color: rgba(240, 243, 227, 0.9);
+  font-weight: 400;  
+  line-height: 1.3;  
+  margin-bottom: 1.3rem;
+}
+
+
+main li strong {
+  color: rgba(169, 255, 244, 0.9);
+  font-weight: 600;  
+}
+
+.column-container {
+  margin-top: calc(20vh - 2%);
+}
+
+.footer p {
+  margin-top: 12%;
+  color: rgba(255, 255, 255, 0.565);
+  font-size: 11px;
+}
+
+
+.accordion-button {
+  background-color: transparent;
+}
+
+.accordion-body {
+  position: relative;
+  top: -30px;
+}
+
+.accordion-button-custom {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+a.accordion-button-custom:hover {
+  transform: scale(1.3) rotate(25deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#mozarts-ghost {
+    position: fixed;
+    opacity: 1;
+    bottom: 0;
+    left: 10px;
+    padding: 10px;
+  }
+  
+  #mozarts-ghost a:link,
+  #mozarts-ghost a:visited {
+    color: rgba(255, 255, 255, 0.714);
+    text-decoration: none;
+  }
+  
+  #mozarts-ghost a:hover {
+    color: rgb(195, 0, 255);
+  }
