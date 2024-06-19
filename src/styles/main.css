@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0; 
     background-color: rgba(8, 0, 16, 0.621);
-    background-image: url("/images/bg1.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg1.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,39 +19,39 @@ body {
 
 @keyframes change-bg {
   0% {
-    background-image: url("/images/bg1.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg1.webp");
   }
 
   20% {
-    background-image: url("/images/bg2.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg2.webp");
   }
 
   30% {
-    background-image: url("/images/bg3.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg3.webp");
   }
   
   40% {
-    background-image: url("/images/bg4.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg4.webp");
   }
 
   50% {
-    background-image: url("/images/bg5.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg5.webp");
   }
 
   60% {
-    background-image: url("/images/bg6.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg6.webp");
   }
 
   70% {
-    background-image: url("/images/bg7.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg7.webp");
   }  
 
   80% {
-    background-image: url("/images/bg8.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg8.webp");
   }    
 
   100% {
-    background-image: url("/images/bg1.webp");
+    background-image: url("https://jsohndata.github.io/no-tiempo/src/images/bg1.webp");
   }
 }
 
