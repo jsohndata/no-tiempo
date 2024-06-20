@@ -44,6 +44,12 @@
                 // Valid ID, use the ternary for a compact conditional assignment
                 return redirectUrls[id] || redirectUrls['2']; // Default to '2' if the ID doesn't exist
             
+            case id === 'sum':
+                // New case to handle the 'sum' condition
+                alert(`Count of redirect URLs: ${Object.keys(redirectUrls).length}`);
+                // After alert, redirect (you'll need to decide where to redirect)
+                return redirectUrls['2']; // Example: Redirecting to the default
+            
             default:
                 // Invalid ID, redirect to '2'
                 return redirectUrls['2'];
