@@ -28,11 +28,29 @@
 };
 
     // https://jsohndata.github.io/no-tiempo/mozartsghost?id=1
-    const targetUrl = id === 'r' 
-      ? redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * Object.keys(redirectUrls).length)]] 
-      : redirectUrls[id]; 
 
-    window.location.href = targetUrl || "<p>Invalid ID. Please check the URL.</p>"; // Redirects or shows error
+    // Get the total number of IDs
+    const totalIds = Object.keys(redirectUrls).length;
+
+    // Determine the target URL with switch and ternary
+    const targetUrl = (function() { 
+        switch (true) {
+            case id === 'r':
+                // Random redirect
+                return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * totalIds)]];
+            
+            case id >= 0 && id < totalIds: 
+                // Valid ID, use the ternary for a compact conditional assignment
+                return redirectUrls[id] || redirectUrls['2']; // Default to '2' if the ID doesn't exist
+            
+            default:
+                // Invalid ID, redirect to '2'
+                return redirectUrls['2'];
+        }
+    })();
+
+    // Redirect if the target URL is found
+    targetUrl && (window.location.href = targetUrl);
   </script>
 </head>
 <body>
