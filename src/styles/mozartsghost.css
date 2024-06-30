@@ -1,0 +1,24 @@
+#mozarts-ghost {
+    position: fixed;
+    opacity: 1;
+    bottom: 0;
+    left: 10px;
+    padding: 10px;
+    animation: pulse-mozart 2s infinite;
+}
+
+#mozarts-ghost a:link,
+#mozarts-ghost a:visited {
+    text-decoration: none;
+}
+
+#mozarts-ghost a:hover {
+    color: rgb(195, 0, 255);
+}
+
+/* Keyframes for animations */
+@keyframes pulse-mozart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
