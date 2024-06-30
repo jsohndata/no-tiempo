@@ -9,11 +9,14 @@
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
+    color: rgba(255, 255, 255, 0.714);
     text-decoration: none;
+    animation: colorChangeLink 10s infinite;
 }
 
 #mozarts-ghost a:hover {
     color: rgb(195, 0, 255);
+    animation: colorChangeHover 10s infinite;
 }
 
 /* Keyframes for animations */
@@ -21,4 +24,22 @@
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
+}
+
+@keyframes colorChangeLink {
+    0% { color: #FF0000; }
+    20% { color: #00FF00; }
+    40% { color: #0000FF; }
+    60% { color: #FFFF00; }
+    80% { color: #FF00FF; }
+    100% { color: #00FFFF; }
+}
+
+@keyframes colorChangeHover {
+    0% { color: #FF00FF; }
+    20% { color: #00FFFF; }
+    40% { color: #FFFF00; }
+    60% { color: #0000FF; }
+    80% { color: #00FF00; }
+    100% { color: #FF0000; }
 }
