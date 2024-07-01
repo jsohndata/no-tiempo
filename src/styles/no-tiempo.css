@@ -33,3 +33,12 @@
     80% { color: #FF00FF; }
     100% { color: #00FFFF; }
 }
+
+#github-link {
+    position: fixed;
+    opacity: 1;
+    bottom: 0;
+    right: 10px;
+    padding: 10px;
+    z-index: -1;
+}
