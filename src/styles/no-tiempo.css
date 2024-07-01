@@ -5,6 +5,7 @@
     left: 10px;
     padding: 10px;
     animation: pulse-mozart 8s infinite;
+    z-index: -1;
 }
 
 #mozarts-ghost a:link,
