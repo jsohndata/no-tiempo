@@ -30,35 +30,35 @@
       '20': 'https://jsohndata.github.io/pulsating-circle/',
     };
     
-    // Get the total number of IDs
-    const totalIds = Object.keys(redirectUrls).length;
-
-    // Determine the target URL with switch and ternary
+    // Determine the target URL
     const targetUrl = (function() { 
         switch (true) {
-            // 1) Random redirect
+            // Random redirect
             case id === 'r':                
-                return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * totalIds)]];
-            
-            // 2) Valid ID, use the next ID for redirection
-            case !isNaN(id) && id in redirectUrls:
-                const nextId = (parseInt(id, 10) + 1) % totalIds;
-                return redirectUrls[nextId.toString()]; 
-            
-            // 3) Alert the Sum Total
+                return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * Object.keys(redirectUrls).length)]];
+
+            // Valid numeric ID, use the next ID for redirection
+            case !isNaN(id) && redirectUrls.hasOwnProperty(id):
+                const nextId = (parseInt(id, 10) + 1).toString();
+                return redirectUrls.hasOwnProperty(nextId) ? redirectUrls[nextId] : redirectUrls['0'];
+
+            // Alert the Sum Total
             case id === 'sum':                
                 alert(`Next ID: ${Object.keys(redirectUrls).length}`);
-                // Example: Redirecting to the default
                 return redirectUrls['2']; 
-            
-            // 4) Catch All
+
+            // Catch All
             default:                
                 return redirectUrls['2'];
         }
     })();
 
     // Redirect to the target URL
-    window.location.href = targetUrl;
+    if (targetUrl) {
+        window.location.href = targetUrl;
+    } else {
+        document.body.innerText = 'Invalid ID';
+    }
   </script>
 </head>
 <body>
