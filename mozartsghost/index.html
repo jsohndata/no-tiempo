@@ -9,7 +9,7 @@
     const redirectUrls = {
       '0':  'https://www.youtube.com/watch?v=hoWEYBSlctc',
       '1':  'https://jsohndata.github.io/full-background-box-centered/',
-      '2':  'https://assenfuego.com/',
+      'fuego':  'https://assenfuego.com/',
       'seoul':  'https://jsohndata.github.io/bluenight-in-seoul/',
       '4':  'https://jsohndata.github.io/kardashev-scale/',
       '5':  'https://jsohndata.github.io/bubble-trails/',
@@ -41,10 +41,9 @@
                 return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * totalIds)]];
             
             // 2) Valid ID, use the next ID for redirection
-            case parseInt(id, 10) >= 0 && parseInt(id, 10) < totalIds - 1:
-                const nextId = parseInt(id, 10) + 1;
-                // Default to '1' if the ID doesn't exist
-                return redirectUrls[nextId.toString()] || redirectUrls['1']; 
+            case !isNaN(id) && id in redirectUrls:
+                const nextId = (parseInt(id, 10) + 1) % totalIds;
+                return redirectUrls[nextId.toString()]; 
             
             // 3) Alert the Sum Total
             case id === 'sum':                
