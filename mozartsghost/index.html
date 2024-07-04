@@ -10,7 +10,7 @@
       '0':  'https://www.youtube.com/watch?v=hoWEYBSlctc',
       '1':  'https://jsohndata.github.io/full-background-box-centered/',
       '2':  'https://assenfuego.com/',
-      '3':  'https://jsohndata.github.io/bluenight-in-seoul/',
+      'seoul':  'https://jsohndata.github.io/bluenight-in-seoul/',
       '4':  'https://jsohndata.github.io/kardashev-scale/',
       '5':  'https://jsohndata.github.io/bubble-trails/',
       '6':  'https://system-overload-solution.web.app/',
@@ -28,45 +28,38 @@
       '18': 'https://jsohndata.github.io/gas-generative-ai-story/',
       '19': 'https://jsohndata.github.io/fortune-cookie/',
       '20': 'https://jsohndata.github.io/pulsating-circle/',
-      
-};
+    };
     
-    /*
-<p id="mozarts-ghost"><a href="https://jsohndata.github.io/no-tiempo/mozartsghost?id=12"
-    alt="Click on it and press control-shift."
-    title="Click on it and press control-shift.">π</a></p>
-
-<link rel="stylesheet" type="text/css" href="https://jsohndata.github.io/no-tiempo/src/styles/no-tiempo.mini.css">
-    */
-
     // Get the total number of IDs
     const totalIds = Object.keys(redirectUrls).length;
 
     // Determine the target URL with switch and ternary
     const targetUrl = (function() { 
         switch (true) {
-            case id === 'r':
-                // Random redirect
+            // 1) Random redirect
+            case id === 'r':                
                 return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * totalIds)]];
             
-            case id >= 0 && id < totalIds: 
-                // Valid ID, use the ternary for a compact conditional assignment
-                return redirectUrls[id] || redirectUrls['1']; // Default to '2' if the ID doesn't exist
+            // 2) Valid ID, use the next ID for redirection
+            case parseInt(id, 10) >= 0 && parseInt(id, 10) < totalIds - 1:
+                const nextId = parseInt(id, 10) + 1;
+                // Default to '1' if the ID doesn't exist
+                return redirectUrls[nextId.toString()] || redirectUrls['1']; 
             
-            case id === 'sum':
-                // New case to handle the 'sum' condition
+            // 3) Alert the Sum Total
+            case id === 'sum':                
                 alert(`Next ID: ${Object.keys(redirectUrls).length}`);
-                // After alert, redirect (you'll need to decide where to redirect)
-                return redirectUrls['2']; // Example: Redirecting to the default
+                // Example: Redirecting to the default
+                return redirectUrls['2']; 
             
-            default:
-                // Invalid ID, redirect to '2'
+            // 4) Catch All
+            default:                
                 return redirectUrls['2'];
         }
     })();
 
-    // Redirect if the target URL is found
-    targetUrl && (window.location.href = targetUrl);
+    // Redirect to the target URL
+    window.location.href = targetUrl;
   </script>
 </head>
 <body>
