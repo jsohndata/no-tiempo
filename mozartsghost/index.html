@@ -45,10 +45,12 @@
               case id === 'fuego':
                   return redirectUrls['seoul'];
 
-              // Valid numeric ID, use the next ID for redirection
-              case !isNaN(id) && redirectUrls.hasOwnProperty(id):
-                  const nextId = (parseInt(id, 10) + 1).toString();
-                  return redirectUrls.hasOwnProperty(nextId) ? redirectUrls[nextId] : redirectUrls['0'];
+              // Valid ID, use the next ID for redirection
+              case id in redirectUrls:
+                  const currentIndex = keys.indexOf(id);
+                  const nextIndex = (currentIndex + 1) % totalIds;
+                  const nextId = keys[nextIndex];
+                  return redirectUrls[nextId];
 
               // Alert the Sum Total
               case id === 'sum':                
