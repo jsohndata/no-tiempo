@@ -12,26 +12,31 @@
 
       const redirectUrls = {
         '0':  'https://www.youtube.com/watch?v=hoWEYBSlctc',
-        '1':  'https://jsohndata.github.io/full-background-box-centered/',
-        'fuego':  'https://assenfuego.com/',
-        'seoul':  'https://jsohndata.github.io/bluenight-in-seoul/',
-        'krdsv':  'https://jsohndata.github.io/kardashev-scale/',
-        '5':  'https://jsohndata.github.io/bubble-trails/',
-        '6':  'https://system-overload-solution.web.app/',
-        '7':  'https://jsohndata.github.io/magic-color-xxl/',
-        '8':  'https://jsohndata.github.io/cogito-ergo-sum/',
-        '9':  'https://jsohndata.com',
-        '10': 'https://jsohndata.github.io/synthational/',
-        '11': 'https://jsohndata.github.io/no-tiempo',
-        '12': 'https://jsohndata.github.io/terra-mater-css-animation/',
-        '13': 'https://jsohndata.github.io/late-night-background-jam/#/page3',
-        '14': 'https://jsohndata.github.io/who-what-where-quiz-app/',
-        '15': 'https://jsohndata.github.io/star-music/',
-        '16': 'https://jsohndata.github.io/bocacode-c9-final-project-portfolio/',
-        '17': 'https://jsohndata.github.io/bocacode-c10-final-project-portfolio/',
-        '18': 'https://jsohndata.github.io/gas-generative-ai-story/',
-        '19': 'https://jsohndata.github.io/fortune-cookie/',
-        '20': 'https://jsohndata.github.io/pulsating-circle/',
+    
+        'sysld': 'https://system-overload-solution.web.app/',    
+        'fuego': 'https://assenfuego.com/',
+        'jshnd': 'https://jsohndata.com',
+
+        'jsmth': 'https://jsohndata.github.io/common-javascript-math-methods/',
+        'krdsv': 'https://jsohndata.github.io/kardashev-scale/',
+        'seoul': 'https://jsohndata.github.io/bluenight-in-seoul/',
+        'fulbg': 'https://jsohndata.github.io/full-background-box-centered/',
+        'mgxxl': 'https://jsohndata.github.io/magic-color-xxl/',
+        'ntmpo': 'https://jsohndata.github.io/no-tiempo',
+        'strmz': 'https://jsohndata.github.io/star-music/',
+        
+        'cogit': 'https://jsohndata.github.io/cogito-ergo-sum/',
+        'sytha': 'https://jsohndata.github.io/synthational/',
+        'terra': 'https://jsohndata.github.io/terra-mater-css-animation/',
+        'bgjam': 'https://jsohndata.github.io/late-night-background-jam/#/page3',
+        'wquiz': 'https://jsohndata.github.io/who-what-where-quiz-app/',    
+        'fnc09': 'https://jsohndata.github.io/bocacode-c9-final-project-portfolio/',
+        'fnc10': 'https://jsohndata.github.io/bocacode-c10-final-project-portfolio/',
+        'gasai': 'https://jsohndata.github.io/gas-generative-ai-story/',
+
+        'fortn': 'https://jsohndata.github.io/fortune-cookie/',
+        'bubbl': 'https://jsohndata.github.io/bubble-trails/',
+        'pulse': 'https://jsohndata.github.io/pulsating-circle/',
       };
 
       // Get the keys of the redirectUrls object
@@ -48,6 +53,9 @@
               // Valid ID, use the next ID for redirection
               case id in redirectUrls:
                   const currentIndex = keys.indexOf(id);
+                  if (currentIndex === -1) {
+                      return null;
+                  }
                   const nextIndex = (currentIndex + 1) % totalIds;
                   const nextId = keys[nextIndex];
                   return redirectUrls[nextId];
@@ -55,11 +63,11 @@
               // Alert the Sum Total
               case id === 'sum':
                   alert(`Next ID: ${totalIds}`);
-                  return redirectUrls['2'];
+                  return redirectUrls[keys[2]]; // Assuming '2' corresponds to 'fulbg'
 
               // Catch All
               default:
-                  return redirectUrls['2'];
+                  return redirectUrls[keys[2]]; // Assuming '2' corresponds to 'fulbg'
           }
       })();
 
