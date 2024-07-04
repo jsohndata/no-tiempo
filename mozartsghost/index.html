@@ -2,66 +2,72 @@
 <html>
 <head>
   <title>Mozart's Ghost</title>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
-
-    const redirectUrls = {
-      '0':  'https://www.youtube.com/watch?v=hoWEYBSlctc',
-      '1':  'https://jsohndata.github.io/full-background-box-centered/',
-      'fuego':  'https://assenfuego.com/',
-      'seoul':  'https://jsohndata.github.io/bluenight-in-seoul/',
-      '4':  'https://jsohndata.github.io/kardashev-scale/',
-      '5':  'https://jsohndata.github.io/bubble-trails/',
-      '6':  'https://system-overload-solution.web.app/',
-      '7':  'https://jsohndata.github.io/magic-color-xxl/',
-      '8':  'https://jsohndata.github.io/cogito-ergo-sum/',
-      '9':  'https://jsohndata.com',
-      '10': 'https://jsohndata.github.io/synthational/',
-      '11': 'https://jsohndata.github.io/no-tiempo',
-      '12': 'https://jsohndata.github.io/terra-mater-css-animation/',
-      '13': 'https://jsohndata.github.io/late-night-background-jam/#/page3',
-      '14': 'https://jsohndata.github.io/who-what-where-quiz-app/',
-      '15': 'https://jsohndata.github.io/star-music/',
-      '16': 'https://jsohndata.github.io/bocacode-c9-final-project-portfolio/',
-      '17': 'https://jsohndata.github.io/bocacode-c10-final-project-portfolio/',
-      '18': 'https://jsohndata.github.io/gas-generative-ai-story/',
-      '19': 'https://jsohndata.github.io/fortune-cookie/',
-      '20': 'https://jsohndata.github.io/pulsating-circle/',
-    };
-    
-    // Determine the target URL
-    const targetUrl = (function() { 
-        switch (true) {
-            // Random redirect
-            case id === 'r':                
-                return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * Object.keys(redirectUrls).length)]];
-
-            // Valid numeric ID, use the next ID for redirection
-            case !isNaN(id) && redirectUrls.hasOwnProperty(id):
-                const nextId = (parseInt(id, 10) + 1).toString();
-                return redirectUrls.hasOwnProperty(nextId) ? redirectUrls[nextId] : redirectUrls['0'];
-
-            // Alert the Sum Total
-            case id === 'sum':                
-                alert(`Next ID: ${Object.keys(redirectUrls).length}`);
-                return redirectUrls['2']; 
-
-            // Catch All
-            default:                
-                return redirectUrls['2'];
-        }
-    })();
-
-    // Redirect to the target URL
-    if (targetUrl) {
-        window.location.href = targetUrl;
-    } else {
-        document.body.innerText = 'Invalid ID';
-    }
-  </script>
 </head>
 <body>
   <p>Redirecting...</p>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+
+      const redirectUrls = {
+        '0':  'https://www.youtube.com/watch?v=hoWEYBSlctc',
+        '1':  'https://jsohndata.github.io/full-background-box-centered/',
+        'fuego':  'https://assenfuego.com/',
+        'seoul':  'https://jsohndata.github.io/bluenight-in-seoul/',
+        '4':  'https://jsohndata.github.io/kardashev-scale/',
+        '5':  'https://jsohndata.github.io/bubble-trails/',
+        '6':  'https://system-overload-solution.web.app/',
+        '7':  'https://jsohndata.github.io/magic-color-xxl/',
+        '8':  'https://jsohndata.github.io/cogito-ergo-sum/',
+        '9':  'https://jsohndata.com',
+        '10': 'https://jsohndata.github.io/synthational/',
+        '11': 'https://jsohndata.github.io/no-tiempo',
+        '12': 'https://jsohndata.github.io/terra-mater-css-animation/',
+        '13': 'https://jsohndata.github.io/late-night-background-jam/#/page3',
+        '14': 'https://jsohndata.github.io/who-what-where-quiz-app/',
+        '15': 'https://jsohndata.github.io/star-music/',
+        '16': 'https://jsohndata.github.io/bocacode-c9-final-project-portfolio/',
+        '17': 'https://jsohndata.github.io/bocacode-c10-final-project-portfolio/',
+        '18': 'https://jsohndata.github.io/gas-generative-ai-story/',
+        '19': 'https://jsohndata.github.io/fortune-cookie/',
+        '20': 'https://jsohndata.github.io/pulsating-circle/',
+      };
+
+      // Determine the target URL
+      const targetUrl = (function() { 
+          switch (true) {
+              // Random redirect
+              case id === 'r':                
+                  return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * Object.keys(redirectUrls).length)]];
+
+              // Specific redirect from 'fuego' to 'seoul'
+              case id === 'fuego':
+                  return redirectUrls['seoul'];
+
+              // Valid numeric ID, use the next ID for redirection
+              case !isNaN(id) && redirectUrls.hasOwnProperty(id):
+                  const nextId = (parseInt(id, 10) + 1).toString();
+                  return redirectUrls.hasOwnProperty(nextId) ? redirectUrls[nextId] : redirectUrls['0'];
+
+              // Alert the Sum Total
+              case id === 'sum':                
+                  alert(`Next ID: ${Object.keys(redirectUrls).length}`);
+                  return redirectUrls['2']; 
+
+              // Catch All
+              default:                
+                  return redirectUrls['2'];
+          }
+      })();
+
+      // Redirect to the target URL
+      if (targetUrl) {
+          window.location.href = targetUrl;
+      } else {
+          document.body.innerText = 'Invalid ID';
+      }
+    });
+  </script>
 </body>
 </html>
