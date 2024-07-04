@@ -34,16 +34,16 @@
         '20': 'https://jsohndata.github.io/pulsating-circle/',
       };
 
+      // Get the keys of the redirectUrls object
+      const keys = Object.keys(redirectUrls);
+      const totalIds = keys.length;
+
       // Determine the target URL
-      const targetUrl = (function() { 
+      const targetUrl = (function() {
           switch (true) {
               // Random redirect
-              case id === 'r':                
-                  return redirectUrls[Object.keys(redirectUrls)[Math.floor(Math.random() * Object.keys(redirectUrls).length)]];
-
-              // Specific redirect from 'fuego' to 'seoul'
-              case id === 'fuego':
-                  return redirectUrls['seoul'];
+              case id === 'r':
+                  return redirectUrls[keys[Math.floor(Math.random() * totalIds)]];
 
               // Valid ID, use the next ID for redirection
               case id in redirectUrls:
@@ -53,12 +53,12 @@
                   return redirectUrls[nextId];
 
               // Alert the Sum Total
-              case id === 'sum':                
-                  alert(`Next ID: ${Object.keys(redirectUrls).length}`);
-                  return redirectUrls['2']; 
+              case id === 'sum':
+                  alert(`Next ID: ${totalIds}`);
+                  return redirectUrls['2'];
 
               // Catch All
-              default:                
+              default:
                   return redirectUrls['2'];
           }
       })();
