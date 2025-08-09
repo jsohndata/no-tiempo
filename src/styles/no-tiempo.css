@@ -8,7 +8,7 @@ html { scroll-behavior: smooth; }
     left: 10px;
 }
 
-#mozarts-ghost a {padding: 10px; background-color: #fbff1270; display: block; border-radius:50%; animation: pulse-mozart 8s infinite; }
+#mozarts-ghost a {padding: 10px; display: block; border-radius:50%; animation: pulse-mozart 8s infinite; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
@@ -29,12 +29,12 @@ html { scroll-behavior: smooth; }
 }
 
 @keyframes colorChangeLink {
-     0%  { background-color: #00FFFF; }
-    20%  { background-color: #00FF00; }
-    40%  { background-color: #0000FF; }
-    60%  { background-color: #FFFF00; }
-    80%  { background-color: #FF00FF; }
-    100% { background-color: #00FFFF; }
+     0%  { background-color: #00FFFF76; }
+    20%  { background-color: #00FF0090; }
+    40%  { background-color: #0000FF80; }
+    60%  { background-color: #FFFF0040; }
+    80%  { background-color: #FF00FF90; }
+    100% { background-color: #00FFFF70; }
 }
 
 #github-link {
