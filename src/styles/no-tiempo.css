@@ -5,21 +5,24 @@ html { scroll-behavior: smooth; }
     position: fixed;
     opacity: 1;
     bottom: 30px;
-    left: 10px;
-    animation: pulse-mozart 8s infinite; 
+    left: 10px;    
 }
 
-#mozarts-ghost a {padding: 10px !important; display: block; animation: colorChangeLink 10s infinite; }
+#mozarts-ghost a {
+    display: block;
+    padding: 10px;
+}
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
     color: rgba(00, 00, 00, 0.714);
     text-decoration: none;
+    animation: 
+        colorChangeLink 10s infinite, 
+        pulse-mozart 8s infinite;
 }
 
-#mozarts-ghost a:hover {
-    font-weight: 700;
-}
+#mozarts-ghost a:hover { font-weight: 700; }
 
 /* Keyframes for animations */
 @keyframes pulse-mozart {
