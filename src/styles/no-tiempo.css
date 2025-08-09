@@ -9,7 +9,7 @@ html { scroll-behavior: smooth; }
     animation: pulse-mozart 8s infinite; 
 }
 
-#mozarts-ghost a {padding: 10px; display: block; border-radius:50%; animation: colorChangeLink 10s infinite; }
+#mozarts-ghost a {padding: 10px !important; display: block; animation: colorChangeLink 10s infinite; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
