@@ -10,7 +10,7 @@ html { scroll-behavior: smooth; }
     animation: pulse-mozart 8s infinite;
 }
 
-#mozarts-ghost a {padding: 10px; background-color: #0000ff; display: block; }
+#mozarts-ghost a {padding: 10px; background-color: #cacfcd96; display: block; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
