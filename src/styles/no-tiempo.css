@@ -6,11 +6,9 @@ html { scroll-behavior: smooth; }
     opacity: 1;
     bottom: 20px;
     left: 10px;
-    padding: 10px;
-    animation: pulse-mozart 8s infinite;
 }
 
-#mozarts-ghost a {padding: 10px; background-color: #fbff1270; display: block; border-radius:50%; }
+#mozarts-ghost a {padding: 10px; background-color: #fbff1270; display: block; border-radius:50%; animation: pulse-mozart 8s infinite; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
