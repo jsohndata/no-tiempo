@@ -32,12 +32,12 @@ html { scroll-behavior: smooth; }
 }
 
 @keyframes colorChangeLink {
-     0%  { background-color: #00FFFF76; }
-    20%  { background-color: #00FF0090; }
-    40%  { background-color: #0000FF80; }
-    60%  { background-color: #FFFF0040; }
-    80%  { background-color: #FF00FF90; }
-    100% { background-color: #00FFFF70; }
+     0%  { color: #00FFFF76; }
+    20%  { color: #00FF0090; }
+    40%  { color: #0000FF80; }
+    60%  { color: #FFFF0040; }
+    80%  { color: #FF00FF90; }
+    100% { color: #00FFFF70; }
 }
 
 #github-link {
