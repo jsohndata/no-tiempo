@@ -7,9 +7,10 @@ html { scroll-behavior: smooth; }
     bottom: 0;
     left: 10px;
     padding: 10px;
-    background-color: #ff0000;
     animation: pulse-mozart 8s infinite;
 }
+
+#mozarts-ghost a {padding: 10px; background-color: #00ff00; display: block; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
