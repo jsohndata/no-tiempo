@@ -4,13 +4,13 @@ html { scroll-behavior: smooth; }
 #mozarts-ghost {
     position: fixed;
     opacity: 1;
-    bottom: 0;
+    bottom: 20px;
     left: 10px;
     padding: 10px;
     animation: pulse-mozart 8s infinite;
 }
 
-#mozarts-ghost a {padding: 10px; background-color: #00ff00; display: block; }
+#mozarts-ghost a {padding: 10px; background-color: #0000ff; display: block; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
