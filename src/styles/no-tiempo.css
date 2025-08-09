@@ -11,7 +11,7 @@ html { scroll-behavior: smooth; }
 #mozarts-ghost a {
     display: block;
     padding: 10px;
-    filter: text-shadow(0 1px 1px #000);
+    text-shadow: 0 1px 1px #000;
 }
 
 #mozarts-ghost a:link,
