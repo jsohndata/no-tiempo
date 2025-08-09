@@ -6,15 +6,16 @@ html { scroll-behavior: smooth; }
     opacity: 1;
     bottom: 20px;
     left: 10px;
+    animation: pulse-mozart 8s infinite; 
 }
 
-#mozarts-ghost a {padding: 10px; display: block; border-radius:50%; animation: pulse-mozart 8s infinite; }
+#mozarts-ghost a {padding: 10px; display: block; border-radius:50%; animation: colorChangeLink 10s infinite; }
 
 #mozarts-ghost a:link,
 #mozarts-ghost a:visited {
     color: rgba(255, 255, 255, 0.714);
     text-decoration: none;
-    animation: colorChangeLink 10s infinite;
+    
 }
 
 #mozarts-ghost a:hover {
