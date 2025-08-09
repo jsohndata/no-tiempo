@@ -34,9 +34,9 @@ html { scroll-behavior: smooth; }
 
 @keyframes colorChangeLink {
      0%  { color: #00FFFF90; }
-    20%  { color: #FF00FF90; }
-    40%  { color: #0000FF90; }
-    60%  { color: #FF39FF90; }
+    20%  { color: #39FF1490; }
+    40%  { color: #FF5E0090; }
+    60%  { color: #BC13FE90; }
     80%  { color: #FF00FF90; }
     100% { color: #001B0390; }
 }
